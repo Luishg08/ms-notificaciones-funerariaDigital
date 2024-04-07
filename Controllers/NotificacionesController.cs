@@ -18,8 +18,8 @@ public class NotificacionesController : ControllerBase
         Console.WriteLine("Enviando correo");
         var options = new RestClientOptions
         {
-        BaseUrl = new Uri("https://api.mailgun.net/v3"),    
-        Authenticator = new HttpBasicAuthenticator("api", "MAILGUN_API_KEY")
+        BaseUrl = new Uri("https://api.mailgun.net/v3"),
+        Authenticator = new HttpBasicAuthenticator("api", Environment.GetEnvironmentVariable("MAILGUN_API_KEY"))
         };
         using var client = new RestClient(options);		
         RestRequest request = new RestRequest ();

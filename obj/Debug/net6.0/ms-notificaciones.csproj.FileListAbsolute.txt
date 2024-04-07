@@ -26,3 +26,5 @@ C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\obj\Debug\net6.0\ms-not
 C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\obj\Debug\net6.0\ms-notificaciones.genruntimeconfig.cache
 C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\obj\Debug\net6.0\ref\ms-notificaciones.dll
 C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\bin\Debug\net6.0\RestSharp.dll
+C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\bin\Debug\net6.0\DotNetEnv.dll
+C:\Users\luish\proyecto-ventas\backend\ms-notificaciones\bin\Debug\net6.0\Sprache.dll
