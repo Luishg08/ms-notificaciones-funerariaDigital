@@ -8,5 +8,6 @@
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.20"/>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+    <PackageReference Include="DotNetEnv" Version="3.0.0"/>
   </ItemGroup>
 </Project>

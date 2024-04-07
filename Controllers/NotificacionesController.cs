@@ -19,7 +19,7 @@ public class NotificacionesController : ControllerBase
         var options = new RestClientOptions
         {
         BaseUrl = new Uri("https://api.mailgun.net/v3"),    
-        Authenticator = new HttpBasicAuthenticator("api", "")
+        Authenticator = new HttpBasicAuthenticator("api", "MAILGUN_API_KEY")
         };
         using var client = new RestClient(options);		
         RestRequest request = new RestRequest ();
