@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XO5FsDoswFFWZE5kQOzBVuLIYKvov7igJbUchwjUlxGJrnIGfQbPi1CRFvwFoz6nnPgYp1oIImMzt38hZIvGFA==",
+  "dgSpecHash": "Jg6T4muxtXtcKvE7DobqX15ihRwez1/2QVjo947MINRSkIKkYSoHmVz+QZy68a+nUbc3Hv65MTP8fGynNV7uFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\luish\\proyecto-ventas\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luish\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\luish\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\luish\\.nuget\\packages\\restsharp\\110.2.1-alpha.0.20\\restsharp.110.2.1-alpha.0.20.nupkg.sha512",
     "C:\\Users\\luish\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\luish\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\luish\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
