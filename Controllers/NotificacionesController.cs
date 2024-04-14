@@ -99,6 +99,35 @@ public class NotificacionesController : ControllerBase
             return BadRequest("Error al enviar el correo");
         }
     }
+    [HttpPost]
+    [Route("correo-verificacion")]
+    public async Task<ActionResult> EnviarCorreoVerificacion(ModeloCorreo datos)
+    {
+        Console.WriteLine("Enviando correo");
+        var options = new RestClientOptions
+        {
+        BaseUrl = new Uri("https://api.mailgun.net/v3"),
+        Authenticator = new HttpBasicAuthenticator("api", Environment.GetEnvironmentVariable("MAILGUN_API_KEY")!)
+        };
+        using var client = new RestClient(options);		
+        RestRequest request = new RestRequest ();
+        request.AddParameter ("domain", "sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org", ParameterType.UrlSegment);
+        request.Resource = "{domain}/messages";
+        request.AddParameter ("from", datos.nombreDestino+" <"+datos.nombreDestino+"@sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org>");
+        request.AddParameter ("to", datos.correoDestino);
+        request.AddParameter ("subject", datos.asuntoCorreo);
+        request.AddParameter ("text", datos.contenidoCorreo);
+        request.AddParameter("template", "plantillacorreoverificacion");
+        Console.WriteLine("Datos:"+datos.contenidoCorreo);
+        request.AddParameter("h:X-Mailgun-Variables", "{\"Mensaje\": \"" + datos.contenidoCorreo + "\"}");
+        request.Method = Method.Post;
+        var respuesta = await client.ExecuteAsync(request);
+        if(respuesta.StatusCode == System.Net.HttpStatusCode.OK){
+            return Ok("Correo enviado");
+        }else{
+            return BadRequest("Error al enviar el correo");
+        }
+    }
 
 //Envió de SMS 
     [HttpPost]
