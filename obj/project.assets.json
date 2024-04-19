@@ -5469,11 +5469,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luish\\proyecto-ventas\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
+      "projectUniqueName": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
       "projectName": "ms-notificaciones",
-      "projectPath": "C:\\Users\\luish\\proyecto-ventas\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
+      "projectPath": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
       "packagesPath": "C:\\Users\\luish\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luish\\proyecto-ventas\\backend\\ms-notificaciones\\obj\\",
+      "outputPath": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luish\\AppData\\Roaming\\NuGet\\NuGet.Config"

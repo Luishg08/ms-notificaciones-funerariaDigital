@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4XZtjdbYFsn0epuQhnlE6fKUjG4dgcUHkzOVtjLQ5AL1kKehtDmpMo+x6CvcNQyJ1QDbWRtWgMsLmD64FD1YIg==",
+  "dgSpecHash": "NtC/8GtqOexQik674rEOT1MpkAiNQTTPgqiO8O+dcXDSAar83we/7MX18WuvBRglKaUgan8UpHrL1e+4oYcD8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luish\\proyecto-ventas\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
+  "projectFilePath": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luish\\.nuget\\packages\\dotnetenv\\3.0.0\\dotnetenv.3.0.0.nupkg.sha512",
     "C:\\Users\\luish\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
