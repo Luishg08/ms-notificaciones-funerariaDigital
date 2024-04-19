@@ -45,7 +45,7 @@ public class NotificacionesController : ControllerBase
 
     [HttpPost]
     [Route("correo-recuperar-contraseña")]
-    public async Task<ActionResult> EnviarRecuperaciónContraseña(ModeloCorreo datos)
+    public async Task<ActionResult> EnviarRecuperaciónContraseña(ModeloCorreoRecuperarContraseña datos)
     {
         Console.WriteLine("Enviando correo");
         var options = new RestClientOptions
@@ -60,8 +60,11 @@ public class NotificacionesController : ControllerBase
         request.AddParameter ("from", datos.nombreDestino+" <"+datos.nombreDestino+"@sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org>");
         request.AddParameter ("to", datos.correoDestino);
         request.AddParameter ("subject", datos.asuntoCorreo);
-        request.AddParameter ("text", datos.contenidoCorreo);
         request.AddParameter("template", "plantillarecuperacioncontraseña");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"contraseña\": \"" + datos.contraseña + "\"}");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"usuario\": \"" + datos.usuario + "\"}");
+        Console.WriteLine("Datos:"+datos.contraseña);
+        Console.WriteLine("Correo destino:"+datos.correoDestino);
         request.Method = Method.Post;
         var respuesta = await client.ExecuteAsync(request);
         if(respuesta.StatusCode == System.Net.HttpStatusCode.OK){
