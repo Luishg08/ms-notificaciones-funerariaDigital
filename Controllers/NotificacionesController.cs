@@ -134,6 +134,65 @@ public class NotificacionesController : ControllerBase
     }
 
     [HttpPost]
+    [Route("correo-agradecimiento-resena")]
+    public async Task<ActionResult> EnviarAgradecimientoReseña(ModeloCorreoReseña datos)
+    {
+        Console.WriteLine("Enviando correo");
+        var options = new RestClientOptions
+        {
+        BaseUrl = new Uri("https://api.mailgun.net/v3"),
+        Authenticator = new HttpBasicAuthenticator("api", Environment.GetEnvironmentVariable("MAILGUN_API_KEY")!)
+        };
+        using var client = new RestClient(options);		
+        RestRequest request = new RestRequest ();
+        request.AddParameter ("domain", "sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org", ParameterType.UrlSegment);
+        request.Resource = "{domain}/messages";
+        request.AddParameter ("from", datos.nombreDestino+" <"+datos.nombreDestino+"@sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org>");
+        request.AddParameter ("to", datos.correoDestino);
+        request.AddParameter ("subject", datos.asuntoCorreo);
+        request.AddParameter("template", "agradecimientoreseña");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"idServicioFunerario\": \"" + datos.idServicioFunerario + "\"}");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"usuario\": \"" + datos.usuario + "\"}");
+        request.Method = Method.Post;
+        var respuesta = await client.ExecuteAsync(request);
+        if(respuesta.StatusCode == System.Net.HttpStatusCode.OK){
+            return Ok("Correo enviado");
+        }else{
+            return BadRequest("Error al enviar el correo");
+        }
+    }
+
+    [HttpPost]
+    [Route("correo-agradecimiento-pqrs")]
+    public async Task<ActionResult> EnviarAgradecimientoPQRS(ModeloCorreoPQRSAdmin datos)
+    {
+        Console.WriteLine("Enviando correo");
+        var options = new RestClientOptions
+        {
+        BaseUrl = new Uri("https://api.mailgun.net/v3"),
+        Authenticator = new HttpBasicAuthenticator("api", Environment.GetEnvironmentVariable("MAILGUN_API_KEY")!)
+        };
+        using var client = new RestClient(options);		
+        RestRequest request = new RestRequest ();
+        request.AddParameter ("domain", "sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org", ParameterType.UrlSegment);
+        request.Resource = "{domain}/messages";
+        request.AddParameter ("from", datos.nombreDestino+" <"+datos.nombreDestino+"@sandbox8f1b39cd63b3454f93202852c09bb380.mailgun.org>");
+        request.AddParameter ("to", datos.correoDestino);
+        request.AddParameter ("subject", datos.asuntoCorreo);
+        request.AddParameter("template", "agradecimientopqrs");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"usuario\": \"" + datos.usuario + "\"}");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"tipoPQRS\": \"" + datos.tipoPQRS + "\"}");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"contenidoMensaje\": \"" + datos.contenidoMensaje + "\"}");
+        request.Method = Method.Post;
+        var respuesta = await client.ExecuteAsync(request);
+        if(respuesta.StatusCode == System.Net.HttpStatusCode.OK){
+            return Ok("Correo enviado");
+        }else{
+            return BadRequest("Error al enviar el correo");
+        }
+    }
+
+    [HttpPost]
     [Route("correo-servicio-funerario")]
     public async Task<ActionResult> EnviarInformacionServicioFunerario(ModeloCorreoServicioFunerario datos)
     {
