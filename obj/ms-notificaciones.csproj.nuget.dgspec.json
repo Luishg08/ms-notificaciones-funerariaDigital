@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj": {}
+    "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-funerariaDigital\\ms-notificaciones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj": {
+    "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-funerariaDigital\\ms-notificaciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
+        "projectUniqueName": "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-funerariaDigital\\ms-notificaciones.csproj",
         "projectName": "ms-notificaciones",
-        "projectPath": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
-        "packagesPath": "C:\\Users\\luish\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luish\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\obj\\",
+        "projectPath": "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-funerariaDigital\\ms-notificaciones.csproj",
+        "packagesPath": "C:\\Users\\Sofi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-funerariaDigital\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luish\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Sofi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,6 +71,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -74,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
