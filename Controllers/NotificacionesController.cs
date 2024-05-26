@@ -123,7 +123,7 @@ public class NotificacionesController : ControllerBase
         request.AddParameter ("text", datos.contenidoCorreo);
         request.AddParameter("template", "plantillacorreoverificacion");
         Console.WriteLine("Datos:"+datos.contenidoCorreo);
-        request.AddParameter("h:X-Mailgun-Variables", "{\"Mensaje\": \"" + datos.contenidoCorreo + "\"}");
+        request.AddParameter("h:X-Mailgun-Variables", "{\"codigo\": \"" + datos.contenidoCorreo + "\"}");
         request.Method = Method.Post;
         var respuesta = await client.ExecuteAsync(request);
         if(respuesta.StatusCode == System.Net.HttpStatusCode.OK){
