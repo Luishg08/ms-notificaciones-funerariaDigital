@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "mp5Xl8gEZRpikPHBuO1fkeb809XDQ5kEIiWl4+YHdgPk4+QDxBvG8UhBjHwTLjbzt5b5aQDL+9mFobrT1sFmIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones\\ms-notificaciones.csproj",
+=======
+  "dgSpecHash": "DLEj2IEYF+tNBSx/+efUgPOGThAEF/znmCwGeub/P4ajZ/kfMlXKfEFu0Sgvq0+9TKA8AY+CaK/ndcDc2NQk2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sofi\\proyecto-funerariaDigital\\backend\\ms-notificaciones-FunerariaDigital\\ms-notificaciones.csproj",
+>>>>>>> f346993423ecb4fca71c6b17068e000c895c1a79
   "expectedPackageFiles": [
     "C:\\Users\\Sofi\\.nuget\\packages\\dotnetenv\\3.0.0\\dotnetenv.3.0.0.nupkg.sha512",
     "C:\\Users\\Sofi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
